@@ -1,0 +1,105 @@
+{% extends 'blank_layout.html' %}
+ {% load static %}
+  {% block content %}
+
+  <style>
+    table{
+      border: 2px solid  black;
+      border-radius: 8px;
+      width: 90vw;
+      height: auto;
+    }
+    th{
+      border:1px solid blue;
+      background-color: rgb(137, 180, 180);
+      color: black;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 18px;
+
+    }
+    td{
+      border: 1px solid #00ff40;
+      background-color: black;
+      color: white;
+      border-radius: 8px;
+      font-family: 'Courier New', Courier, monospace;
+
+    }
+    td a{
+      /* border: none; */
+      border: 2px solid #00ff40;
+      text-decoration: none;
+      color:#1fceff;
+      background-color: blue;
+      border-radius: 7px;
+      padding: 8px;
+      font-family: 'Courier New', Courier, monospace;
+      margin: 5px;
+    }
+    td a:hover{
+      background-color:#1fceff;
+      color: blue;
+      
+    }
+    td h2{
+      color: #00ff40;
+      margin-left:15px;
+    }
+    td h4{
+      color: #00ff40;
+      margin-left:15px;
+    }
+    td p{
+      color: #00ff40;
+      margin-left:15px;
+    }
+    td img{
+      margin-left: 53px;
+      border: 2px solid #00ff40;
+      border-radius: 15px;
+    }
+    
+  </style>
+  {% for movie_obj in recent_movies %}
+  <p>{{ movie_obj.title |upper }}</p>
+  {% endfor %}
+
+<h1>List movies {{ visits }} times visited   </h1>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Year</th>
+    <th>Edit / Delete</th>
+    <th>Image</th>
+  </tr>
+  {% for movie_obj in movies %}
+  <tr>
+    <td>
+      <h2>{{movie_obj.title}}</h2>
+    </td>
+
+    <td>
+      <p>{{movie_obj.description}}</p>
+    </td>
+
+    <td>
+      <h4>{{movie_obj.year}}</h4>
+    </td>
+
+    <td>
+      <a href="{% url 'edit' movie_obj.id %}">Edit</a>
+      <a href="{% url 'delete' movie_obj.id %}">Delete</a>
+    </td>
+    <td>
+      {% if movie_obj.poster %}
+
+      <img width="150" height="150" src="{{ movie_obj.poster.url }}" /> <img />
+
+      {% endif %}
+    </td>
+  </tr>
+
+  {% endfor %}
+</table>
+{% endblock content %}

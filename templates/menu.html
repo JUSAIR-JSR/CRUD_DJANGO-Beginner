@@ -1,0 +1,46 @@
+<style>
+    
+    ul li{
+        list-style: none;
+        display: inline;
+        padding: 25px;
+        cursor: pointer;
+        justify-content: end;
+    }
+    ul li a{
+        color: rgb(5, 243, 255);
+        text-decoration: none;
+        padding: 10px;
+        border-radius: 15px;
+        background-color: rgb(20, 3, 27);
+        font-size: 16px;
+        font-family: 'Courier New', Courier, monospace;
+        border: 2px solid rgb(0, 255, 47);
+    }
+    ul li a:hover{
+        background-color: rgb(232, 232, 238);
+        color: rgb(14, 73, 73);
+    }
+</style>
+<header>
+  <nav>
+    <ul>
+      <li>
+        <a href="{% url 'create' %}">create Movies</a>
+      </li>
+
+      <li>
+        <a href="{% url 'list' %}">list Movies</a>
+      </li>
+      <li>
+        <a href="{% url 'signup' %}">Signup</a>
+      </li>
+      <li>
+        <a href="{% url 'login' %}">Login</a>
+      </li>
+      <li>
+        <a href="{% url 'logout' %}">Logout</a>
+      </li>
+    </ul>
+  </nav>
+</header>

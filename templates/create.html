@@ -1,0 +1,88 @@
+{% extends 'blank_layout.html' %}
+
+{% block content %}
+<style>
+    
+   
+        
+    
+    .container{
+        padding: 25px;
+        color: rgb(3, 208, 208);
+        background-color: black;
+        height: 160vh;
+        width: 50vw;
+        margin: 45px;
+        border-radius: 15px;
+
+    }
+    form{ 
+        padding: 35px;
+        color: rgb(4, 255, 255);
+        background-color: rgb(7, 100, 136);
+        height: 130vh;
+        width: 40vw;
+        margin: 35px;
+        border-radius: 15px;
+        border: none;
+    }
+    p{
+        padding: 15px;
+        border: none;
+    }
+    input {
+        padding: 15px;
+        border-radius: 15px;
+        border: none;
+
+    }
+    textarea{
+        padding: 15px;
+        border-radius: 15px;
+        border: none;
+
+    }
+   select{
+    padding: 15px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+
+   }
+   label{
+    font-size: larger;
+
+   }
+   button{
+    padding: 10px;
+    border-radius: 12px;
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 300;
+    background-color: rgb(25, 248, 0);
+    border: none;
+    margin: 15px;
+    cursor: pointer;
+   }
+   button:hover{
+    background-color: rgb(174, 17, 106);
+    color: azure;
+   }
+</style>
+
+    <div class="container">
+   
+  
+
+
+
+<h1>create</h1>
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ frm.as_p }}
+   <button type="submit">Submit</button>
+
+</form>
+</div>
+
+{% endblock content %}
