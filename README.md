@@ -1,6 +1,5 @@
-"# CRUD_DJANGO-Beginner" 
 
-"# CRUD_DJANGO-Beginner" 
+# CRUD_DJANGO-Beginner 
 -----------------------
 
 # How to start..
