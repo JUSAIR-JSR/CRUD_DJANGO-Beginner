@@ -1,22 +1,22 @@
 "# CRUD_DJANGO-Beginner" 
 
 #####creation####
-# 👇️ create virtual environment
+#  create virtual environment
 python -m venv {venv}=>"ishtamulla name kodkkaam"
 
-# 👇️ activate on Windows (cmd.exe)
+#  activate on Windows (cmd.exe)
 venv\Scripts\activate
 
-# 👇️ activate on Windows (PowerShell)
+#  activate on Windows (PowerShell)
 venv\Scripts\Activate.ps1
 
-# 👇️ activate on Unix or MacOS
+#  activate on Unix or MacOS
 source venv/bin/activate
 
-# 👇️ install django in the virtual environment
+#  install django in the virtual environment
 pip install django
 
-# 👇️ start your django project
+#  start your django project
 django-admin startproject mysite
 
 
