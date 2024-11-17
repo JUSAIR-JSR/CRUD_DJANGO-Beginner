@@ -91,3 +91,17 @@ You should now be able to access your Django project at http://127.0.0.1:8000/ i
 
 Optional: Install Code Editor or IDE
 For writing and editing your Django code, you might want to install a code editor or IDE like Visual Studio Code, PyCharm, or Sublime Text.
+
+# How to set admin
+### Create a Superuser
+- Run the following command to create a superuser (admin user):
+`` python manage.py createsuperuser ``
+### Register Models with the Admin
+- Open the admin.py file in your app directory and register your models:
+  ```
+  from django.contrib import admin
+  from .models import YourModel
+
+  admin.site.register(YourModel)
+```
+
